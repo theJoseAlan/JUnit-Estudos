@@ -22,6 +22,5 @@ public class TesteConta {
         System.out.println("Não deve depositar com conta inativa");
         System.out.println("Saldo conta 2: "+conta2.getSaldo());
 
-
     }
 }

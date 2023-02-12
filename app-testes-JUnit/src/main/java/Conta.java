@@ -19,6 +19,9 @@ public class Conta {
 
         if(this.ativo){
             this.saldo += valor;
+
+        }else {
+            throw new RuntimeException("Conta inativa! Não pode depositar");
         }
 
     }
@@ -26,6 +29,9 @@ public class Conta {
     public void sacar(double valor){
         if(this.ativo && this.saldo - valor >=0){
             this.saldo -= valor;
+
+        }else {
+            throw new RuntimeException("Conta inativa ou saldo inferior ao valor de saque! Não foi possível sacar");
         }
     }
 
