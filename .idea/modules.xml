@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/JUnit-EscolaDev.iml" filepath="$PROJECT_DIR$/.idea/JUnit-EscolaDev.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app-testes-JUnit/JUnit-EscolaDevs.iml" filepath="$PROJECT_DIR$/app-testes-JUnit/JUnit-EscolaDevs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JUnit-Estudos.iml" filepath="$PROJECT_DIR$/.idea/JUnit-Estudos.iml" />
     </modules>
   </component>
 </project>
