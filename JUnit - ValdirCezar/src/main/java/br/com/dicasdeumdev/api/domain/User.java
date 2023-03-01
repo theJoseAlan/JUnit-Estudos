@@ -3,6 +3,9 @@ package br.com.dicasdeumdev.api.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.Hibernate;
+
+import java.util.Objects;
 
 @Data
 @AllArgsConstructor
@@ -20,5 +23,6 @@ public class User {
     private String email;
 
     private String password;
+
 
 }
