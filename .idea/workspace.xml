@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88175459-c571-479d-b66d-789a4ca65bf6" name="Changes" comment="Classe usuário" />
+    <list default="true" id="88175459-c571-479d-b66d-789a4ca65bf6" name="Changes" comment="Classe usuário">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JUnit - ValdirCezar/src/main/java/br/com/dicasdeumdev/api/resources/UserResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/JUnit - ValdirCezar/src/main/java/br/com/dicasdeumdev/api/resources/UserResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JUnit - ValdirCezar/src/main/java/br/com/dicasdeumdev/api/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JUnit - ValdirCezar/src/main/java/br/com/dicasdeumdev/api/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JUnit - ValdirCezar/src/main/java/br/com/dicasdeumdev/api/services/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JUnit - ValdirCezar/src/main/java/br/com/dicasdeumdev/api/services/impl/UserServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
