@@ -3,6 +3,7 @@ package com.example.demo.services.mpl;
 import com.example.demo.domain.Usuario;
 import com.example.demo.respositories.UsuarioRepository;
 import com.example.demo.services.UsuarioService;
+import com.example.demo.services.exceptions.ObjectNotfoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,7 @@ public class UsuarioServicempl implements UsuarioService {
 
         Optional<Usuario> obj = repository.findById(id);
 
-        return obj.orElse(null);
+        return obj.orElseThrow(() -> new ObjectNotfoundException("Objeto não encontrado"));
 
     }
 
