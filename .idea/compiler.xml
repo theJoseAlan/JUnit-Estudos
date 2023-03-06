@@ -8,17 +8,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="app-testes-JUnit" />
-        <module name="JUnit - ValdirCezar - API" />
+        <module name="demo" />
+        <module name="Avaliacao" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="JUnit-Valdir-Cezar" target="19" />
-      <module name="JUnit-Valdir-Cezat" target="19" />
+      <module name="app-testes-JUnit" target="19" />
+      <module name="Avaliacao" target="19" />
+      <module name="demo" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="JUnit - ValdirCezar - API" options="-parameters" />
+      <module name="Avaliacao" options="-parameters" />
+      <module name="demo" options="-parameters" />
     </option>
   </component>
 </project>
