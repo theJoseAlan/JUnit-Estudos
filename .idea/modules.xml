@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Avaliacao/Avaliacao.iml" filepath="$PROJECT_DIR$/Avaliacao/Avaliacao.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JUnit-Estudos.iml" filepath="$PROJECT_DIR$/.idea/JUnit-Estudos.iml" />
       <module fileurl="file://$PROJECT_DIR$/JUnit-EscolaDevs/app-testes-JUnit.iml" filepath="$PROJECT_DIR$/JUnit-EscolaDevs/app-testes-JUnit.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JUnit - ValdirCezar/demo.iml" filepath="$PROJECT_DIR$/JUnit - ValdirCezar/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JUnit - Valdir Cezar/demo.iml" filepath="$PROJECT_DIR$/JUnit - Valdir Cezar/demo.iml" />
     </modules>
   </component>
 </project>
