@@ -7,6 +7,7 @@ import com.example.demo.services.exceptions.ObjectNotfoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -22,6 +23,10 @@ public class UsuarioServicempl implements UsuarioService {
 
         return obj.orElseThrow(() -> new ObjectNotfoundException("Objeto não encontrado"));
 
+    }
+
+    public List<Usuario> findAll(){
+        return repository.findAll();
     }
 
 }

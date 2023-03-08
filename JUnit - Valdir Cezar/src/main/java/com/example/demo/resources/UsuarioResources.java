@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RestController
 @RequestMapping(value = "/usuario")
 public class UsuarioResources {
@@ -27,6 +30,13 @@ public class UsuarioResources {
         //mapper.map(fonte, destino) - Deve ser passado a fonte e o destino para conversão
         return ResponseEntity.ok().body(mapper.map(service.findById(id), UsuarioDTO.class));
 
+    }
+
+    @GetMapping
+    public ResponseEntity<List<UsuarioDTO>> findAll(){
+
+        return ResponseEntity.ok().body(service.findAll().stream()
+                .map(x -> mapper.map(x, UsuarioDTO.class)).collect(Collectors.toList()));
     }
 
 }
