@@ -17,13 +17,14 @@ import java.util.stream.Collectors;
 @RequestMapping(value = "/usuario")
 public class UsuarioResources {
 
+    public static final String ID = "/{id}";
     @Autowired
     private ModelMapper mapper;
 
     @Autowired
     private UsuarioService service;
 
-    @GetMapping(value = "{id}")
+    @GetMapping(value = ID)
     public ResponseEntity<UsuarioDTO> findById(@PathVariable Integer id){
 
         //mapper.map(fonte, destino) - Deve ser passado a fonte e o destino para conversão
@@ -42,18 +43,27 @@ public class UsuarioResources {
     public ResponseEntity<UsuarioDTO> create(@RequestBody UsuarioDTO obj){
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
-                .path("/{id}").buildAndExpand(service.create(obj).getId()).toUri();
+                .path(ID).buildAndExpand(service.create(obj).getId()).toUri();
 
         return ResponseEntity.created(uri).build();
 
     }
 
-    @PutMapping("/{id}")
+    @PutMapping(ID)
     public ResponseEntity<UsuarioDTO> update(@PathVariable Integer id, @RequestBody UsuarioDTO obj){
 
         obj.setId(id);
 
         return ResponseEntity.ok().body(mapper.map(service.update(obj), UsuarioDTO.class));
+
+    }
+
+    @DeleteMapping(ID)
+    public ResponseEntity<UsuarioDTO> delete(@PathVariable Integer id){
+
+        service.delete(id);
+
+        return ResponseEntity.noContent().build();
 
     }
 
