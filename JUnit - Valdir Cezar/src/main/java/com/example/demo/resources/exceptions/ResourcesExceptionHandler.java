@@ -18,6 +18,6 @@ public class ResourcesExceptionHandler {
                 ex.getMessage(), request.getRequestURI());
 
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
-    } 
+    }
 
 }
