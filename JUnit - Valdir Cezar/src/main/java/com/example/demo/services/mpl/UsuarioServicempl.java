@@ -4,6 +4,7 @@ import com.example.demo.domain.Usuario;
 import com.example.demo.domain.dto.UsuarioDTO;
 import com.example.demo.respositories.UsuarioRepository;
 import com.example.demo.services.UsuarioService;
+import com.example.demo.services.exceptions.DataIntegratyViolationException;
 import com.example.demo.services.exceptions.ObjectNotfoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ public class UsuarioServicempl implements UsuarioService {
     @Autowired
     private UsuarioRepository repository;
 
+
     @Override
     public Usuario findById(Integer id) {
 
@@ -36,7 +38,18 @@ public class UsuarioServicempl implements UsuarioService {
 
     @Override
     public Usuario create(UsuarioDTO obj) {
+
+        findByEmail(obj);
+
         return repository.save(mapper.map(obj, Usuario.class));
+    }
+
+    public void findByEmail(UsuarioDTO obj){
+        Optional<Usuario> usuario = repository.findByEmail(obj.getEmail());
+
+        if(usuario.isPresent()){
+            throw new DataIntegratyViolationException("Email já cadastrado no sistema");
+        }
     }
 
 }

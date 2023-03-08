@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e96a3e2-040f-4db5-a3e2-fa9f13fd3772" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/services/exceptions/DataIntegratyViolationException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/domain/dto/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/domain/dto/UsuarioDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/resources/UsuarioResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/resources/UsuarioResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/services/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/services/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/resources/exceptions/ResourcesExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/resources/exceptions/ResourcesExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/respositories/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/respositories/UsuarioRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/services/mpl/UsuarioServicempl.java" beforeDir="false" afterPath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/services/mpl/UsuarioServicempl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +58,11 @@
     "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.demo.services.exceptions" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.demo.DemoApplication" />
