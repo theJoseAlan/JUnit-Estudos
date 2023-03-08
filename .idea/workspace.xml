@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e96a3e2-040f-4db5-a3e2-fa9f13fd3772" name="Changes" comment="" />
+    <list default="true" id="4e96a3e2-040f-4db5-a3e2-fa9f13fd3772" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/config/ModelMapperConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/domain/dto/UsuarioDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/domain/dto/UsuarioDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/resources/UsuarioResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/JUnit - Valdir Cezar/src/main/java/com/example/demo/resources/UsuarioResources.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -45,7 +53,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
   <component name="RunManager">
