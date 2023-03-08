@@ -1,5 +1,6 @@
 package com.example.demo.domain.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,6 +19,7 @@ public class UsuarioDTO {
 
     private String email;
 
+    @JsonIgnore //Ignora (oculta na api) a senha
     private String senha;
 
 }
