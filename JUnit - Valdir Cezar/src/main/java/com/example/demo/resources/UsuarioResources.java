@@ -1,7 +1,9 @@
 package com.example.demo.resources;
 
 import com.example.demo.domain.Usuario;
+import com.example.demo.domain.dto.UsuarioDTO;
 import com.example.demo.services.UsuarioService;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,12 +16,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class UsuarioResources {
 
     @Autowired
+    private ModelMapper mapper;
+
+    @Autowired
     private UsuarioService service;
 
     @GetMapping(value = "{id}")
-    public ResponseEntity<Usuario> findById(@PathVariable Integer id){
+    public ResponseEntity<UsuarioDTO> findById(@PathVariable Integer id){
 
-        return ResponseEntity.ok().body(service.findById(id));
+        //mapper.map(fonte, destino) - Deve ser passado a fonte e o destino para conversão
+        return ResponseEntity.ok().body(mapper.map(service.findById(id), UsuarioDTO.class));
 
     }
 
