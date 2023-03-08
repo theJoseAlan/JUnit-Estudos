@@ -1,6 +1,7 @@
 package com.example.demo.domain.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,7 +20,8 @@ public class UsuarioDTO {
 
     private String email;
 
-    @JsonIgnore //Ignora (oculta na api) a senha
+    //@JsonIgnore //Ignora (oculta na api) a senha. Obs.: problema é que aparece null no BD
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) //Libera para escrita, mas não para leitura
     private String senha;
 
 }
