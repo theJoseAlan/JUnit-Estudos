@@ -142,8 +142,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in demo" />
-        <item itemvalue="JUnit.UsuarioServicemplTest.FindByIdNotFoundException" />
         <item itemvalue="JUnit.UsuarioServicemplTest.findById" />
+        <item itemvalue="JUnit.UsuarioServicemplTest.FindByIdNotFoundException" />
         <item itemvalue="JUnit.DemoApplicationTests.main" />
         <item itemvalue="Application.DemoApplication" />
       </list>
@@ -172,6 +172,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JUnit_Estudos$All_in_demo.ic" NAME="All in demo Coverage Results" MODIFIED="1678709855605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/JUnit_Estudos$All_in_demo.ic" NAME="All in demo Coverage Results" MODIFIED="1678711963574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
