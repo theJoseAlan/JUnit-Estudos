@@ -107,6 +107,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UsuarioServicemplTest.FindByIdNotFoundException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.services.mpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.services.mpl" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.services.mpl.UsuarioServicemplTest" />
+      <option name="METHOD_NAME" value="FindByIdNotFoundException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UsuarioServicemplTest.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -126,6 +142,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in demo" />
+        <item itemvalue="JUnit.UsuarioServicemplTest.FindByIdNotFoundException" />
         <item itemvalue="JUnit.UsuarioServicemplTest.findById" />
         <item itemvalue="JUnit.DemoApplicationTests.main" />
         <item itemvalue="Application.DemoApplication" />

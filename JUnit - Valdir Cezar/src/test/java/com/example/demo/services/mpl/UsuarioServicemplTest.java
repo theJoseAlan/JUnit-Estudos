@@ -3,6 +3,7 @@ package com.example.demo.services.mpl;
 import com.example.demo.domain.Usuario;
 import com.example.demo.domain.dto.UsuarioDTO;
 import com.example.demo.respositories.UsuarioRepository;
+import com.example.demo.services.exceptions.ObjectNotfoundException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -51,6 +52,7 @@ class UsuarioServicemplTest {
 
     }
 
+    //Teste de usuário encontado pelo ID e retorno da instância do usuário
     @Test
     @DisplayName("FindByID deve retornar uma instância de usuário")
     void findById() {
@@ -83,6 +85,25 @@ class UsuarioServicemplTest {
         assertEquals(EMAIL, response.getEmail());
 
 
+    }
+
+
+    //Nesse teste, quando chamar o ID uma exceção deve ser gerada.
+    //Assim o teste tenta (try) chamar o ID e ele deve cair no catch para só então
+    //o assert comparar se a exceção esperada foi a mesma que o teste gerou
+    @Test
+    @DisplayName("FindByID deve retornar uma exceção de Objeto não encontrado")
+    void FindByIdNotFoundException(){
+        when(repository.findById(anyInt())).thenThrow(new ObjectNotfoundException("Objeto não encontrado"));
+
+        try{
+            service.findById(ID);
+        }catch (Exception ex){
+            assertEquals(ObjectNotfoundException.class, ex.getClass());
+
+            //Verificando se a menssagem que espero é a mesma retornada
+            assertEquals("Objeto não encontrado", ex.getMessage());
+        }
     }
 
     @Test
