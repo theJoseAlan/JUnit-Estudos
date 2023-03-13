@@ -4,6 +4,7 @@ import com.example.demo.domain.Usuario;
 import com.example.demo.domain.dto.UsuarioDTO;
 import com.example.demo.respositories.UsuarioRepository;
 import com.example.demo.services.exceptions.ObjectNotfoundException;
+import org.h2.engine.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -15,9 +16,11 @@ import org.mockito.MockitoAnnotations;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;
 
@@ -29,6 +32,7 @@ class UsuarioServicemplTest {
     public static final String NOME = "Alan Sales";
     public static final String EMAIL = "alansales@gmail.com";
     public static final String SENHA = "1234";
+    public static final int INDEX = 0;
     @InjectMocks //Indicando que precisa de uma instância real para testar os métodos
     private UsuarioServicempl service; //Se vou testar, devo ter uma instância dela
 
@@ -63,7 +67,7 @@ class UsuarioServicemplTest {
         Usuario response = service.findById(ID);
 
         //Assegure que o response não vai ser nulo
-        Assertions.assertNotNull(response);
+        assertNotNull(response);
 
         //Assegure que esses dois argumentos são iguais.
         //O primeiro é o que espero receber, o segundo é o que o método retornará
@@ -71,18 +75,13 @@ class UsuarioServicemplTest {
 
         //Testando os atributos esperados e retornados
 
-        //Assegure que o ID do incio da classe
-        //vai ser igual ao ID do response
-        //ID esperado -> 1
+        //Assegure que o ID do incio da classse vai ser igual ao ID do response
+        //(O mesmo vale para os demais atributos)
         assertEquals(ID, response.getId());
 
-        //Assegure que o NOME do incio da classe
-        //vai ser igual ao NOME do response
         assertEquals(NOME, response.getNome());
-
-        //Assegure que o EMAIL do incio da classe
-        //vai ser igual ao EMAIL do response
         assertEquals(EMAIL, response.getEmail());
+
 
 
     }
@@ -107,7 +106,31 @@ class UsuarioServicemplTest {
     }
 
     @Test
+    @DisplayName("FindAll deve retornar uma lista de usuários")
     void findAll() {
+
+        //Em list.of() podem ser mais de um usuário no parâmetro list.of(user1, user2, user3)
+        when(repository.findAll()).thenReturn(List.of(usuario));
+
+        List<Usuario> response = service.findAll();
+
+        //Para verificar se não retornará nulo
+        assertNotNull(response);
+
+        //O tamanho da lista deve ser apenas 1, já que só colocamos 1 usuário na lista
+        assertEquals(1, response.size());
+
+        //Verificando se o objeto no index 0 da lista tenha a classe Usuário
+        assertEquals(Usuario.class, response.get(INDEX).getClass());
+
+        //Verificando se o objeto no index 0 da lista tem o ID igual ao ID esperado
+        //que está como constante no início da classe (o mesmo vale para os demais atributos)
+        assertEquals(ID, response.get(
+                INDEX).getId());
+
+        assertEquals(NOME, response.get(INDEX).getNome());
+        assertEquals(EMAIL, response.get(INDEX).getEmail());
+        assertEquals(SENHA, response.get(INDEX).getSenha());
     }
 
     @Test
